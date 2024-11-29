@@ -7,7 +7,7 @@
 
 **2. Average Metric By Country (Map)**  
     Use the Place column to create a map visualization.  
-    Add a **Pick a Metric** parameter to allow users to select metrics from the dataset 
+    Add a Pick a Metric parameter to allow users to select metrics from the dataset 
     (e.g., Overall Rating, Cabin Staff Service).  
     Create a calculated field to dynamically filter the selected metric.  
     Apply color coding based on the average value of the selected metric for each country.  
