@@ -1,39 +1,42 @@
 ### Steps to Build the Dashboard
-Here’s the concise version of the process tailored for a GitHub README file:
+**1. Join Tables**
 
----
+    Merge the BA Reviews table with the Countries table using the Place column from BA Reviews and the Country column from Countries.
+    Ensure the join is accurate and all necessary fields are included.
 
-# British Airways Review Dashboard
+**2. Average Metric By Country (Map)**
 
-### Steps to Build the Dashboard
+    Use the Place column to create a map visualization.
+    Add a Pick a Metric parameter to allow users to select metrics from the dataset (e.g., Overall Rating, Cabin Staff Service).
+    Create a calculated field to dynamically filter the selected metric.
+    Apply color coding based on the average value of the selected metric for each country.
+    Add filters for Month of Date, Seat Type, Traveler Type, and Continent.
 
-1. **Join Tables**  
-   Merge BA Reviews and Countries tables using the Place column and the Country Column.  
-   Validate the join for completeness and accuracy.  
+**3. Average Metric By Month (Line Chart)**
 
-2. **Average Metric By Country (Map)**  
-   Use the Place column for geography and generate the map
-   create the new parameter Pick a metric and the metrics which are in the data
-   Create the calculated feild to use the metrics as filteres in the map 
-   Give the coloring based on the avg of the selected metrics for the map.
-   Add the required filters in the similar manner.
+    Plot Month-Year on the X-axis and the selected metric on the Y-axis.
+    Ensure the chart updates dynamically based on the selected metric.
 
-4. **Average Metric By Month (Line Chart)**  
-   Plot Month-Year on the X-axis and selected metrics on the Y-axis.
+**4. Average Metric By Aircraft (Dual Bar Chart)**
 
-5. **Average Metric By Aircraft (Dual Bar Chart)**  
-   Create a bar chart showing `Average Rating` and `Review Count` side by side for each aircraft.
+    Create a dual bar chart for each aircraft type:
+        Bar 1: Average value of the selected metric.
+        Bar 2: Review Count.
+    Use contrasting colors to differentiate between the two metrics.
 
-6. **Build the Dashboard**  
-   Layout:
-     **Left Sidebar**: Filters.  
-     **Top Section**: Summary metrics.  
-     **Main Section**: Map, Line Chart, and Bar Chart.  
-   Link filters across all visualizations for interactivity.  
+**5. Build the Dashboard**
 
-### Filters Used
-- **Date**  
-- **Seat Type** (Economy, Business, etc.)  
-- **Traveler Type** (Business, Family Leisure, etc.)  
-- **Aircraft Type**  
+    Layout:
+        Left Sidebar: Add filters for Pick a Metric, Month of Date, Seat Type, Traveler Type, Aircraft Type, and       Continent.
+        Top Section: Display summary metrics like the average ratings for services.
+        Main Section: Include the Map, Line Chart, and Dual Bar Chart.
+    Link all visualizations to the filters for interactivity.
 
+**Filters Used**
+
+    Pick a Metric (e.g., Overall Rating, Value for Money)
+    Month of Date
+    Seat Type (Economy, Business, Premium Economy, etc.)
+    Traveler Type (Business, Couple Leisure, Family Leisure, etc.)
+    Aircraft Type
+    Continent
